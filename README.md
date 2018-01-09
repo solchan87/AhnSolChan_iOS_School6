@@ -81,7 +81,7 @@ These instructions will get you a copy of the project up and running on your loc
 	+ 두번째
 2. 세번째 
 
-##블럭
+## 블럭
 * __블럭__
     ```
      ```{.python}
@@ -100,7 +100,7 @@ def sum(a, b):
     ```
 `code`
 
-##링크
+## 링크
 * __인라인 링크__
 	```
 	[링크](http://example.com "링크제목").
@@ -118,7 +118,7 @@ def sum(a, b):
 [1]: http://example.com/ "링크제목1"
 [2]: http://example.org/ "링크제목2"
 
-##수평선
+## 수평선
 * __수평선__
 	```
 	---------
