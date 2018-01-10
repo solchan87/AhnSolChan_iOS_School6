@@ -1,4 +1,4 @@
-# Markdown 문법정리
+# Markdown 문법 정리
 > 2018.01.09 업데이트
 
 ## Markdown 이란
