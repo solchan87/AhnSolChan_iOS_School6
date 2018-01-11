@@ -34,11 +34,11 @@ class Person {
     var tall: Double = 0
     
     func eat(money: Int) {
-        print("\(name)이 \(money)원의 점심을 먹습니다.")
+        print("\(name)이(가) \(money)원의 점심을 먹습니다.")
     }
     
     func run(distance: Int, speed: Int) {
-        print("\(name)이 \(speed)의 속도로 \(distance)m를 달렸습니다.")
+        print("\(name)이(가) \(speed)km/h의 속도로 \(distance)m를 달렸습니다.")
     }
     
     func checkBody() {
@@ -118,7 +118,7 @@ iName.start()
 ```
 안솔찬이(가) 5000원의 점심을 먹습니다.
 안솔찬의 나이는 32살이고 키는 165.6cm, 시력은 1.2입니다.
-안솔찬이(가) 20km/s의 속도로 100m를 달렸습니다.
+안솔찬이(가) 20km/h의 속도로 100m를 달렸습니다.
 김민수이(가) 6000원의 점심을 먹습니다.
-김은미이(가) 12km/s의 속도로 1000m를 달렸습니다.
+김은미이(가) 12km/h의 속도로 1000m를 달렸습니다.
 ```
