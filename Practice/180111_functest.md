@@ -1,7 +1,22 @@
+# Swift 기초 문법
+> 2018.01.10 업데이트
+
+### 변수와 함수
+* 변수 : 프로그램에서 데이터의 저장 공간을 담당
+> 키워드 + 변수명(Name): + 변수 타입(Type) = 값(Value) / 문법 예) `var vName: Any = 3`
+* 함수 : 프로그램이 실행되는 행동을 담당
+> 키워드 + 함수명(Name) + 입력값(Input Value) + 함수 내용(Action) + 결과 타입
+```swift
+func fName(Parameter: Any) -> Any
+{
+    //함수 내용
+}
+```
+
 ```swift
 import Foundation
 
-class human {
+class Person {
     var name: String = ""
     var age: Int = 0
     var eye: Double = 0
