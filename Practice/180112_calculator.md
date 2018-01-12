@@ -2,7 +2,8 @@
 > 2018.01.12 업데이트
 
 ## 실습 내용
-<img src="img/180112_calc.png" width="30%">  
+<img src="img/180112_calc.png" width="30%">   
+
 > 4칙 연산만 적용된 계산기 UI
 
 ```swift
@@ -29,35 +30,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    //MARK: - Action Method
+    // MARK: - Action Method
     @IBAction func cilckDidNumber(_ sender: UIButton) {
         // 버튼의 제목 라벨의 텍스트를 상수에 담는다.
         let numberStr = sender.titleLabel!.text!
         
         // operationTemp에 연산자가 있을 경우 secondDisplay에 입력되는 조건문
         if operationTemp.count > 0{
-            
-//            let secondDisplay = secondNumDisplay.text!
-            
             if secondNum == "0"{
-//                secondNumDisplay.text = numberStr
                 secondNum = numberStr
             }else{
-//                secondNumDisplay.text = secondNumDisplay.text! + numberStr
                 secondNum = secondNum + numberStr
             }
             secondNumDisplay.text = secondNum
         }else{
-            
-//            let firstDisplay = firstNumDisplay.text!
-            
             if firstNum == "0"{
-//                firstNumDisplay.text = numberStr
                 firstNum = numberStr
                 // 첫번째 디스플레이 값이 0일때 디스플레이를 초기화할 수 있는 위치
                 resetDisplay()
             }else{
-//                firstNumDisplay.text = firstNumDisplay.text! + numberStr
                 firstNum = firstNum + numberStr
             }
             firstNumDisplay.text = firstNum
@@ -71,12 +62,11 @@ class ViewController: UIViewController {
         if firstDisplay != "0"{
             operationTemp = operStr
             operationText.text = operationTemp
-//            changeColor(by: operStr)
             
             // 버튼 색상을 추출해서 화면 배경을 바꿔주는 로직
+            // sender.backgroundColor를 이용하여 버튼의 색상을 추출할 수 있다.
             let color:UIColor = sender.backgroundColor!
             changeLabelBG(color: color)
-            
         }
     }
     
@@ -193,3 +183,14 @@ class ViewController: UIViewController {
 ```
 
 * 'storyboard'에 있는 뷰의 액션을 'viewController'에 연결해줄 때는 드레그 하기전 `control`을 눌러서 옮겨줄 수 있다.
+
+## 마무리
+
+`버튼의 신호를 받아 클래스 내 함수 실행`  
+스토리보드와 연결된 함수는 해당 뷰의 액션을 받아 함수를 실행하는데, 액션에는 다양한 정보가 담겨 있어 이것을 활용하여, 다양한 연산이 가능하다.
+
+`버튼에서 오는 데이터를 문자화 하여 변수에 저장`  
+버튼에서 오는 숫자 데이터를 바로 계산할 수 있도록 Int에 저장할 수 있지만, 그렇게 될 경우 2자리 이상의 수부터는 10진법으로 앞에 있던 숫자 뒤로 입력되는 숫자가 붙는게 아니라 덧샘이 되기 때문에, 스트링으로 문자를 합쳐서 결과 함수 실행때 Int로 변환하여 작업한다.  
+
+`if 조건문`
+계산기의 상황에 맞게 if문을 사용하여 변수의 위치를 바꿔가면서 저장할 수 있다.
