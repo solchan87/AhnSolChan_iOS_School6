@@ -18,4 +18,5 @@ FastCampus iOS School 6기 스터디 기록물입니다.
   > 객체 지향 방법론을 통해 프로그램을 어떻게 생산적이고 효율적으로 할 수 있는지 알 수 있었다.
 
 ### 3. 강의 과정 정리
-*  [Swift문법 기초 - 클래스, 변수 , 함수](/Practice/180111_functest.md "Swift문법 기초 - 18.01.11")
+*  [Swift 문법 기초 - 클래스, 변수 , 함수](/Practice/180111_functest.md "Swift 문법 기초 - 18.01.11")
+*  [Swift 실습 - 사칙연산 계산기 만들기](/Practice/180111_functest.md "Swift 실습 - 18.01.12")
