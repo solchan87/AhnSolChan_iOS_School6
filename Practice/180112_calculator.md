@@ -3,6 +3,7 @@
 
 ## 실습 내용
 <img src="img/180112_calc.png" width="30%">
+
 > 4칙 연산만 적용된 계산기 UI
 
 ```swift
