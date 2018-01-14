@@ -79,7 +79,6 @@ class ViewController: UIViewController {
     
     // 결과값을 계산하는 함수
     @IBAction func clickDidResult(_ sender: UIButton) {
-//        let secondNumStr = secondNumDisplay.text!
         if secondNum != "0"{
             let firstNumTemp: Int = Int(firstNum)!
             let secondNumTemp: Int = Int(secondNum)!
