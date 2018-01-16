@@ -374,7 +374,7 @@ func sumIntToString(num1: Int, num2: Int) -> String{
 #### 3-4 캐스팅 문제 반올림 - rounded
 ```swift
 //실수를 하나 입력받아서 소수점 첫번재 자리에서 반올림 후 정수를 반환해주는 함수
-func roundToDouble1(num: Double) -> Int{
+func roundOfDouble1(num: Double) -> Int{
     // 실수의 소수점을 반올림 해서 정수로 바꿔주는 함수
     let result: Int! = Int(num.rounded())
     return result
@@ -386,7 +386,7 @@ func roundToDouble1(num: Double) -> Int{
 #### 3-5 캐스팅 문제 반올림 - reminder
 ```swift
 //실수를 하나 입력받아서 소수점 첫번재 자리에서 반올림 후 정수를 반환해주는 함수
-func roundToDouble2(num: Double) -> Int{
+func roundOfDouble2(num: Double) -> Int{
     
     // 나머지를 구하는 연산자 %에서 double로 나눠지지 않는 것을 수동으로 대체한 파라미터
     let modul: Double = num.remainder(dividingBy: 1.0)
@@ -405,7 +405,7 @@ func roundToDouble2(num: Double) -> Int{
 
 #### 3-5 캐스팅 문제 반올림
 ```swift
-func roundToDouble3(num: Double) -> Int{
+func roundOfDouble3(num: Double) -> Int{
     
     let tempA: Double = num * 10
     let tempB: Int! = Int(tempA) % 10
@@ -418,7 +418,7 @@ func roundToDouble3(num: Double) -> Int{
     }
 }
 
-print(roundToDouble3(num: 1.63244))
+print(roundOfDouble3(num: 1.63244))
 ```
 
-> 다른 함수를 안쓰고 나눗셈과 나머지를 구하는 공식으로 소숫점 1번째 자리를 정수 단위로 올려서 값을 추출할 수 비교문을 통해 반올림을 할 수 있었다.
+> 나눗셈과 곱샘으로 소숫점 자리를 정수의 위치로 올린다음 정수 첫째자리를 구하여, 조건문으로 반올림을 구분하는 함수이다.
