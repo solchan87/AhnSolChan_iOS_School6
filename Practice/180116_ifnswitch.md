@@ -325,6 +325,7 @@ func gradeOf(score: Int) -> String{
 print(gradeOf(score: 87)) // B+
 ```
 
+### switch 문제
 ```swift
 //여러개의 grade를 입력받아서 grade의 평균을 반환해주는 함수
 func averageOfGrade(grades: String...) -> Double{
