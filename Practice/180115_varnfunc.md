@@ -1,8 +1,7 @@
 # Swift 문법
 > 2018.01.15 업데이트
 
-## 이론 강의
-### 변수
+## 변수
 * 변수명  
 > 명명 규칙에 따라서 작성   
 > 유니코드 문자를 포함하여 모든 문자가 포함될 수 있다.(한글 가능)   
@@ -61,7 +60,7 @@
      doubleNum = Double(intNum) //int to Double
 ```
 
-### 함수 
+## 함수 
 > Swift 프로그램에서 연산을 담당하는 부분 
 
 1) Argument Name and Parameter Names   
@@ -98,8 +97,8 @@ swapTowInts(&num1, &num2)
 print(num1,num2) //8 10
 ```
 
-## 실습
-#### 1 도형 계산식 실습
+### 함수 실습
+#### 실습 1) 도형 계산식 실습
 ```swift
 // 도형 계산식 실습
 
@@ -195,7 +194,7 @@ class CalcCone{
 
 > 간단하게 식을 함수에 대입해서 할 수 있다.
 
-#### 2-1 단위 변환해주는 함수
+#### 실습 2) 도형 계산식 실습
 ```swift
 // 인치를 센치로 바꾸는 함수
 func inchToCm(_ inch: Double) -> Double{
@@ -246,7 +245,7 @@ func mbToGb(_ mb: Double) -> Double{
 
 > 변환 공식을 함수에 대입해서 풀 수 있다.
 
-#### 2-2 시간을 hhmmss로 받아 초 단위로 반환하는 함수 - String
+#### 실습 2-1) 시간을 hhmmss로 받아 초 단위로 반환하는 함수 - String
 ```swift
 // 시간을 hhmmss로 받아 초 단위로 바꾸는 함수 - String
 func timeToSecond(hhmmss time:String) -> Int{
@@ -273,7 +272,7 @@ print(timeToSecond(hhmmss: "112233"))
 
 > hhmmss(시간)을 스트링으로 받았을 경우 처리할 수 있게 받을 스트링을 인덱스번호를 바탕으로 잘라서 인트로 변환하여 초 단위를 구할 수 있게 했다. 하지만, 들어오는 값에 대한 예외처리는 하지 못했다.
 
-#### 2-3 시간을 hhmmss로 받아 초 단위로 반환하는 함수 - Int
+#### 실습 2-2) 시간을 hhmmss로 받아 초 단위로 반환하는 함수 - Int
 ```swift
 // 시간을 hhmmss로 받아 초 단위로 바꾸는 함수 - Int
 func changeToSecond(from time: Int) -> Int{
@@ -297,7 +296,7 @@ func changeToSecond(from time: Int) -> Int{
 
 > hhmmss(시간)을 Int(정수)로 받았을 경우 나눗샘과 나머지를 구하는 방식으로 정수를 잘라서 초단위를 구할 수 있었다.
 
-### 3-1 기초 문제
+#### 실습 3-1) 함수 기초 문제
 ```swift
 //<기초>
 //1-a 이름(문자열)을 받아서 이름을 출력하는 함수
@@ -322,7 +321,7 @@ func squareInt(num: Int) -> Int{
 }
 ```
 
-### 3-2 응용 문제
+#### 실습 3-2) 함수 응용 문제
 ```swift
 //<응용 - 다중 입력, 반환>
 //2-a. 두개의 정수를 입력받아 두수의 합을 반환해주는 함수
@@ -355,7 +354,7 @@ func scoreByAverage(scoreA: Double, scoreB: Double, scoreC: Double, scoreD: Doub
 }
 ```
 
-#### 3-3 캐스팅 문제
+#### 실습 3-3) 캐스팅 문제
 ```swift
 //<캐스팅>
 //정수를 하나 입력받아서 실수로 변환 후 반환해주는 함수
@@ -371,7 +370,7 @@ func sumIntToString(num1: Int, num2: Int) -> String{
 }
 ```
 
-#### 3-4 캐스팅 문제 반올림 - rounded
+#### 실습 3-4) 캐스팅 문제 반올림 - rounded
 ```swift
 //실수를 하나 입력받아서 소수점 첫번재 자리에서 반올림 후 정수를 반환해주는 함수
 func roundOfDouble1(num: Double) -> Int{
@@ -383,7 +382,7 @@ func roundOfDouble1(num: Double) -> Int{
 
 > rounded를 사용하여 반올림을 할 수 있다.
 
-#### 3-5 캐스팅 문제 반올림 - reminder
+#### 실습 3-5) 캐스팅 문제 반올림 - reminder
 ```swift
 //실수를 하나 입력받아서 소수점 첫번재 자리에서 반올림 후 정수를 반환해주는 함수
 func roundOfDouble2(num: Double) -> Int{
@@ -403,7 +402,7 @@ func roundOfDouble2(num: Double) -> Int{
 
 > %는 정수로만 연산이 되도록 되있는데 remainder를 통해 예외적으로 실수로 계산할 수 있다.
 
-#### 3-5 캐스팅 문제 반올림
+#### 실습 3-6) 캐스팅 문제 반올림
 ```swift
 func roundOfDouble3(num: Double) -> Int{
     

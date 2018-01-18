@@ -22,3 +22,4 @@ FastCampus iOS School 6기 스터디 기록물입니다.
 *  [Swift 실습 - 사칙연산 계산기 만들기](/Practice/180112_calculator.md "Swift 실습 - 18.01.12")
 *  [Swift 문법 기초 & 실습 - 변수 타입, 클래스](/Practice/180115_varnfunc.md "Swift 실습 - 18.01.15")
 *  [Swift 문법 기초 & 실습 - 조건문, 연산자](/Practice/180116_ifnswitch.md "Swift 실습 - 18.01.16")
+*  [Swift 문법 기초 & 실습 - 반복문](/Practice/180118_fornwhile.md "Swift 실습 - 18.01.18")
