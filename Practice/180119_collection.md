@@ -158,7 +158,7 @@ func dicTest(){
 
 ## 응용 실습 문제
 
-#### 실습 1-1)
+#### 실습 1-1)기초
 ```swift
 //시작과 끝수를 받아서 두 수 사이의 모든 수를 가지고 있는 배열 만들기
 func insideNum(num1: Int, num2: Int) -> Array<Int>{
@@ -174,7 +174,7 @@ func insideNum(num1: Int, num2: Int) -> Array<Int>{
 insideNum(num1: 1, num2: 4) // 1,2,3,4
 ```
 
-#### 실습 1-2)
+#### 실습 1-2)기초
 ```swift
 //정수 타입의 배열을 입력받아 모든 배열의 수의 합을 리턴하는 함수
 func sumArray(arrayNum: Array<Int>) -> Int{
@@ -188,7 +188,7 @@ func sumArray(arrayNum: Array<Int>) -> Int{
 sumArray(arrayNum: insideNum(num1: 1, num2: 5)) // 15
 ```
 
-#### 실습 1-3)
+#### 실습 1-3)기초
 ```swift
 //딕셔너리에 있는 모든 데이터 출력하는 함수 >> 데이터: ["name":"joo", "age":20, "job":"Developer"]
 let Data: [String : Any] = ["name" : "joo", "age" : 20, "job" : "Developer"]
@@ -202,13 +202,14 @@ func exportData(_ dicData:[String: Any]){
 exportData(Data)
 ```
 
-#### 실습 2-1)
+#### 실습 2-1)기초
 ```swift
 //정수 타입의 배열을 받아서 배열안의 중복된 수를 모두 제거된 배열을 반환하는 함수
 func removeDuplicate(of list: [Int]) -> [Int]{
     var resultList:[Int] = []
     
     for n in list{
+        //.contains가 배열내에 n 값이 있는지 확인해준다.
         if !resultList.contains(n){
             resultList.append(n)
         }
@@ -216,37 +217,34 @@ func removeDuplicate(of list: [Int]) -> [Int]{
     return resultList
 }
 ```
+> .contains 함수로 새로 만든 배열에 중복된 숫자가 있는지 확인하여 없을때만 
 
 #### 실습 2-2
 ```swift
 //정수 배열을 입력받아, 배열의 요소 중 두 개를 선택하는 조합을 모두 포함하는 배열을 작성하세요.
 //>> [1, 2, 3] -> [[1, 2], [1, 3], [2, 3]]
 
-let arrayNumEx2 = [1,2,3,4,5]
-func makeMixArr(arrNum: Array<Int>) -> Array<Array<Int>>{
-    var resultArr = Array<Array<Int>>()
-    
-    var count: Int = 0
-    let subCount: Int = arrNum.count - 1
-    
-    for _ in 1...subCount{
-        var tempArr = Array<Int>()
-        for num in (count + 1)...subCount{
-            tempArr = []
-            tempArr.append(arrNum[count])
-            tempArr.append(arrNum[num])
-            
-            resultArr.append(tempArr)
+let exNum = [1,2,3,4,5]
+func sperate(list: [Int]) -> [[Int]]{
+    // 조합된 요소를 받아줄 배열 생성
+    var resultList: [[Int]] = []
+    for n in 0..<list.count{
+        // 배열 첫수를 넣어준다.
+        let firstV = list[n]
+        //  n+1 식으로 마지막 배열은 for문을 안돌리게 된다.
+        for i in n+1..<list.count{
+            // 배열 두번째 수를 넣어준다.
+            let secondV = list[i]
+            resultList.append([firstV,secondV])
         }
-        count += 1
     }
-    return resultArr
+    return resultList
 }
-
-makeMixArr(arrNum: arrayNumEx2)
+sperate(list: exNum)
 ```
+> for문은 조건이 안맞을 경우 돌아가지 않는다.   
 
-#### 실습 
+#### 실습 3-1)
 ```swift
 //정수 타입의 배열을 입력받아서 오름차순으로 정렬된 배열을 만들어 리턴하시오.(정렬 함수 사용x)   (정렬의 효율은 보지 않습니다.)
 let arrayNumEx3 = [4,5,1,2,7,2,7,2,3]
@@ -282,7 +280,7 @@ func sortArray(randomArr: [Int]) -> [Int]{
 sortArray(randomArr: arrayNumEx3)
 ```
 
-#### 실습 
+#### 실습 3-2)
 ```swift
 // 에라토스테네스의 체 알고리즘을 이용하여  입력된 숫자까지의 모든 소수의 배열을 반환하는 함수
 func eratosthenes(maxNum: Int) -> Array<Int>{
@@ -313,4 +311,4 @@ func eratosthenes(maxNum: Int) -> Array<Int>{
 
 eratosthenes(maxNum: 120)
 ```
-
+> 에라스토테네스의 체는 2의 수부터 배수를 없에면 다음에 오게 되는 수가 소수가 되는 원리를 이용하여, 2부터 1씩 올려가며 배수를 삭제하는 알고리즘이다.
