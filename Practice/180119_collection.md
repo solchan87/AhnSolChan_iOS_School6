@@ -282,18 +282,19 @@ sortArray(randomArr: arrayNumEx3)
 
 #### 실습 3-2)
 ```swift
-// 에라토스테네스의 체 알고리즘을 이용하여  입력된 숫자까지의 모든 소수의 배열을 반환하는 함수
+//>>에라토스테네스의 체 알고리즘을 이용하여  입력된 숫자까지의 모든 소수의 배열을 반환하는 함수
 func eratosthenes(maxNum: Int) -> Array<Int>{
-    var resultArray = Array<Int>()
+    // 입력된 숫자까지를 범위 연산자를 통해서 배열에 저장한다.
+    var resultArray = Array(2...maxNum)
+    // 마지막 배열임을 확인하는 Bool값
     var flag: Bool = true
     var tempIndex: Int = 0
-    for startNum in 2...maxNum{
-        resultArray.append(startNum)
-    }
+    // 마지막 배열 전까지 while문을 반복한다.
     while flag {
         print(resultArray[tempIndex])
         var i: Int = 0
         for checkNum in resultArray{
+            // 2부터 소수의 값으로 나눠 떨어지는 소수의 배수들을 차례대로 삭제하는 반복문
             if checkNum % resultArray[tempIndex] == 0 && checkNum / resultArray[tempIndex] != 1{
                 resultArray.remove(at: i)
                 i -= 1
