@@ -80,7 +80,7 @@ class Person{
 
 ```swift
 class ViewController: UIViewController{
-    //init 시점이아닌사용이되는시점에초기화한다. 
+    //init 시점이 아닌 사용이 되는 시점에 초기화한다. 
     lazy var cal:Calculator = Calculator()
     override func viewDidLoad(){
         super.viewDidLoad()cal.average(student: Student())
