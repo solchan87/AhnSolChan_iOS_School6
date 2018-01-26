@@ -33,13 +33,13 @@
 public class SomePublicClass{
     public var somePublicProperty = 0
     var someInternalProperty = 0
-    fileprivate func someFilePrivateMethod() {}
+    fileprivate func someFilePrivateMethod(){}
     privatefunc somePrivateMethod(){}
 } 
 class SomeInternalClass{
     var someInternalProperty = 0
-    fileprivate func someFilePrivateMethod() {}
-    private func somePrivateMethod() {}
+    fileprivate func someFilePrivateMethod(){}
+    private func somePrivateMethod(){}
 }
 fileprivate class SomeFilePrivateClass{
     func someFilePrivateMethod(){}
