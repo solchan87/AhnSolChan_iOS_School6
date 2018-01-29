@@ -154,7 +154,7 @@ struct Cuboid{
 ```
 
 ### 타입 프로퍼티 (TypeProperties)
-> 
+> 타입 프로퍼티
 
 
 
