@@ -154,9 +154,33 @@ struct Cuboid{
 ```
 
 ### 타입 프로퍼티 (TypeProperties)
-> 타입 프로퍼티
+> 타입 프로퍼티는 인스턴스 전체가 아닌 하나의 타입(속성)을 정의할 수 으며, .문법으로 정의할 속성을 정한다.
 
+* 인스턴스의 속성이 아닌, 타입에 따른 속성을 정의 할수 있다.  
+* static 키워드를 사용해서 타입 프로퍼티를 설정할수 있으며, 클래스의 경우 연산 프로퍼티의 오버라이드를 지원하기 위해서는 class 키워드를 사용해서 클래스 타입에서 연산 프로퍼티를 설정해야 한다.(class키워드는 저장 프로퍼티는 사용불가) 
+* 값을 가져올때는 클래스의 이름을 통해서 가져올 수 있다.
 
+```swift
+struct AudioChannel {
+    static let level = 10
+    static var maxLevel = 0
+    var currentLevel: Int = 0 {
+        didSet {
+            if currentLevel > AudioChannel.level {
+                currentLevel = AudioChannel.level            
+            }
+            if currentLevel > AudioChannel.maxLevel {
+                AudioChannel.maxLevel = currentLevel
+            }
+        }
+    }
+}
+```
+
+### Method
+* 메서드는 특정 타입에 관련된 함수를 뜻한다.  
+* 함수의 문법과 같다.  
+* 인스턴스의 기능을 수행하는 인스턴스 메서드와 타입자체의 기능을 수행하는 타입 메서드로 나눌수 있습니다.
 
 ## 참고문서
-* [[때로는 까칠하게.. - tistory]](http://kka7.tistory.com/29)
+* [[접근제어 - 때로는 까칠하게..tistory]](http://kka7.tistory.com/29)
