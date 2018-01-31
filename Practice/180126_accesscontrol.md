@@ -177,10 +177,39 @@ struct AudioChannel {
 }
 ```
 
-### Method
+#### Method
 * 메서드는 특정 타입에 관련된 함수를 뜻한다.  
 * 함수의 문법과 같다.  
 * 인스턴스의 기능을 수행하는 인스턴스 메서드와 타입자체의 기능을 수행하는 타입 메서드로 나눌수 있습니다.
+
+#### self Property
+* 모든 인스턴스는 self 프로퍼티를 가지고 있다.  
+* self 프로퍼티는 자기 자신을 가르키고 있는 프로퍼티이다.   
+* Type Method안에서의 self는 클래스 자체를 가르키고, instance Method안에서는 self는 인스턴스를 가리킨다.
+
+```swift
+struct Point {
+    var x = 0.0, y = 0.0
+    func isToTheRightOf(x: Double) -> Bool {
+        // self. 문법으로 구조체의 x 를 가리킨다.
+        return self.x > x
+    }
+}
+```
+
+#### Value Type 프로퍼티 수정
+* 기본적으로 구조체와 열거형의 값타입 프로퍼티는 인스턴스 메소드 내에서 수정이 불가능 하다.  
+* 그러나 특정 메소드에서 수정을 해야 할경우에는 `mutating` 키워드를 통해 변경 가능하다.
+
+```swift
+struct Point { 
+    var x = 0.0, y = 0.0
+    mutating func moveBy(x deltaX: Double, y deltaY: Double) {
+        x += deltaX
+        y += deltaY
+    }
+}
+```
 
 ## 참고문서
 * [[접근제어 - 때로는 까칠하게..tistory]](http://kka7.tistory.com/29)
