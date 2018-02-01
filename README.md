@@ -26,7 +26,6 @@ FastCampus iOS School 6기 스터디 기록물입니다.
 *  [Swift 문법 기초 & 실습 - 컬랙션(Array, Set, Dictionary)](/Practice/180119_collection.md "Swift 실습 - 18.01.19")
 *  [Swift 실습 - 숫자 야구 게임 만들기](/Practice/180122_baseball.md "Swift 실습 - 18.01.22")
 *  [Swift 문법 기초 - 클래스, 구조체, 초기화](/Practice/180123_class.md "Swift 실습 - 18.01.26")
-*  [Swift 문법 기초 - 접근 제어, Property](/Practice/180126_accesscontrol.md "Swift 실습 - 18.01.26
-ㅁㄴㅁㄴㄴㅁㅁㄴㅁㄴㅁㄴㅁㄴㅁㄴ
-ㅁㄴㅁㄴㄴㅁㅁㄴㅁㄴ")
+*  [Swift 문법 기초 - 옵셔널](/Practice/180125_optional.md "Swift 실습 - 18.01.25")
+*  [Swift 문법 기초 - 접근 제어, Property](/Practice/180126_accesscontrol.md "Swift 실습 - 18.01.26")
 
