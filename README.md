@@ -28,7 +28,7 @@ FastCampus iOS School 6기 스터디 기록물입니다.
 *  [Swift 문법 기초 - 클래스, 구조체, 초기화](/Practice/180123_class.md "Swift 실습 - 18.01.26")
 *  [Swift 문법 기초 - 옵셔널](/Practice/180125_optional.md "Swift 실습 - 18.01.25")
 *  [Swift 문법 기초 - 접근 제어, Property](/Practice/180126_accesscontrol.md "Swift 실습 - 18.01.26")
-*  [Swift 문법 기초 - UI 기초](/Practice/1180201_uibase.md "Swift 실습 - 18.02.01")
+*  [Swift 문법 기초 - UI 기초](/Practice/180201_uibase.md "Swift 실습 - 18.02.01")
 *  [Swift 문법 기초 - 앱 생성 주기](/Practice/180205_applifecycle.md "Swift 실습 - 18.02.05")
 *  [Swift 문법 기초 - delegate](/Practice/180206_delegate.md "Swift 실습 - 18.02.06")
 
