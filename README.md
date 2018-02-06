@@ -30,3 +30,5 @@ FastCampus iOS School 6기 스터디 기록물입니다.
 *  [Swift 문법 기초 - 접근 제어, Property](/Practice/180126_accesscontrol.md "Swift 실습 - 18.01.26")
 *  [Swift 문법 기초 - UI 기초](/Practice/1180201_uibase.md "Swift 실습 - 18.02.01")
 
+### 4. 스터디 파일
+*  [카드 맞추는 게임 개발](https://github.com/solchan87/CardMatching "Swift 개발 - 18.02.04")
