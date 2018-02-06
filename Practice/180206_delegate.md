@@ -47,3 +47,52 @@ class Animal: Runable {
 ```
 
 #### 추상 클래스로의 Protocol
+* 프로토콜을 추상 클래스처럼 사용할 수 있다.
+* 다음과 같은 클래스가 있고, racing이라는 함수를 구현하려고 한다면
+```swift
+class Dog: Runable {
+    //... 
+}
+class Horse: Runable {
+    //... 
+}
+func racing(animals: [Runable]) -> Runable {
+
+}
+
+// 프로토콜 타입으로 사용 가능하다.
+let winner: Runable = racing(animals: [Dog(), Horse()])
+```
+
+### Delegate
+* 델리게이트는 클래스나 구조체에서의 일부분의 할일을 다른 인스턴스에게 대신하게 하는 디자인패턴!
+* 뷰가 받은 이벤트나 상태를 ViewController에게 전달해 주기위해 주로 사용된다. (ex : `UIScrollViewDelegate`)
+* ViewController를 통해 View구성에 필요한 데이터를 받는 용도로도 사용(ex : `UITableViewDataSource`)
+
+#### CustomDelegate 만들기
+* Delegate 선언부
+```swift
+class CustomView: UIView {
+    var delegate: CustomViewDelegate?
+    override func layoutSubviews() {
+        delegate?.viewFrameChanged(newFrame:self.frame)
+    } 
+}
+protocol CustomViewDelegate {
+    func viewFrameChanged(newFrame:CGRect)
+}
+```
+
+* Delegate 구현부
+```swift
+class ViewController: UIViewController, CustomViewDelegate {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let custom = CustomView()
+        custom.delegate = self
+    }
+    func viewFrameChanged(newFrame: CGRect) { 
+        // 뷰의 프레임이 변경될 때마다 불림 
+    }
+}
+```
