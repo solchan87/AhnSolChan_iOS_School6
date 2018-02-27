@@ -50,8 +50,9 @@ switch productBarcode {
         print("QR code: \(productCode).")
 }
 
-// Pattern Matching - 값이 매칭할 경우 정상 바코드 구문 실행
+// Pattern Matching - 값이 매칭할 경우 정상 바코드 구문 실행   
 let productBarcode = Barcode.upc(8, 85909, 51226, 3)
+
 if case let Barcode.upc(8, companyCode, productCode, 3) = productBarcode {
     // 정상바코드
     print(companyCode) 
