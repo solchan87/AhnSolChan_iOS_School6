@@ -45,9 +45,9 @@ productBarcode = .qrCode("ABCDEFGHIJKLMNOP")
 // 연관 열거형 값 불러오기
 switch productBarcode {
     case .upc(let numberSystem, let manufacturer, let product, let check) :
-        print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).”)
-    case .qrCode(let productCode) : 
-        print("QR code: \(productCode).")
+        print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).”) 
+    case .qrCode(let productCode) :
+        print("QR code: \(productCode)")
 }
 
 // Pattern Matching 값이 매칭할 경우 정상 바코드 구문 실행   
@@ -125,5 +125,18 @@ func cannotThrowErrors() -> String
 
 ### 에러 처리
 * 함수가 에러를 throw하면 프로그램의 흐름이 변경되므로 에러가 발생할 수있는 코드의 위치를 신속하게 식별 할 수 있어야합니다.  
-* 이 장소를 식별하기 위해 try 나 try?, try!를 사용할수 있습니다.  
+* 이 장소를 식별하기 위해 `try` 나 `try?`, `try!`를 사용할수 있습니다.  
 * 발결된 에러를 처리하기 위해 do-catch 문을 사용해서 에러를 처리 합니다.  
+
+#### do - catch
+```swift
+do {
+    try expression
+    statements   
+} catch pattern 1 {
+    statements
+} catch pattern 2 where condition {
+    statements
+}
+```
+> throws를 통해서 전달해주는 에러만 잡을 수 있다.
