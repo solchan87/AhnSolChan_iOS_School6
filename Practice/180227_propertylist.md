@@ -45,7 +45,7 @@ func loadPlist(fileName:String) -> [String: String]{
     if let bundlePath = Bundle.main.path(forResource: fileName, ofType: "plist"){
         // 2. Data 로드
         do{
-            let data = try Data(contentsOf: URL(fileURLWithPath: path)
+            let data = try Data(contentsOf: URL(fileURLWithPath: bundlePath))
             //3. Dictionary
             let dic = try PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as! [String: String]
 
@@ -53,6 +53,7 @@ func loadPlist(fileName:String) -> [String: String]{
         }catch{
             print("error")
         }
+        return [:]
     }
 }
 ```
