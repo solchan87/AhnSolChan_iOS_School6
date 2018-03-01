@@ -34,13 +34,14 @@ if let path = filePath {
 }
 ```
 
-### Plist File load for Bundle
+### 번들에서 plist 파일 불러오기
 ```swift
 func sample{
     let loadDataDic = loadPlist(fileName:"fileName")
 }
 
 func loadPlist(fileName:String) -> [String: String]{
+    
     // 1. Path
     if let bundlePath = Bundle.main.path(forResource: fileName, ofType: "plist"){
         // 2. Data 로드
@@ -56,4 +57,37 @@ func loadPlist(fileName:String) -> [String: String]{
         return [:]
     }
 }
+```
+
+
+### Document folder에서 plist 파일 불러오기
+1. Document folder Path 찾기
+2. Document folder에 plist 파일이 있는지 확인
+    * 만약 없다면 : bundle에 있는 plist파일을 Document에 복사
+3. Path를 통해 Data인스턴스로 변환
+4. PropertyListSerialization으로 Data를 컬렉션으로 변환 
+5. 컬렉션 데이터 가공 후 PropertyListSerialization로 Data 변환 
+6. 파일에 다시 저장
+
+```swift
+func loadPlistForDoc(fileName: String) -> [String: String]?{
+        let  rootPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let fullPath = rootPath + "/" + fileName + ".plist"
+        if !FileManager.default.fileExists(atPath: fullPath){
+            //번들의 경로
+            if let bundlePath = Bundle.main.path(forResource: fileName, ofType: "plist"){
+                //파일이 존재하지 않을 경우 번들에 있는 데이터를 도큐먼트에 복사 -> copy
+                try? FileManager.default.copyItem(atPath: bundlePath, toPath: fullPath)
+            }
+        }
+        if let data = try? Data(contentsOf: URL(fileURLWithPath: fullPath)),
+        var dic = try? PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil) as! [String: String]{
+            // 데이터 변경
+            dic.updateValue("wing", forKey: "ID")
+            
+            let newData = try! PropertyListSerialization.data(fromPropertyList: dic, format: .xml, options: 0)
+            try? newData.write(to: URL(fileURLWithPath: fullPath))
+        }
+        return nil
+    }
 ```
