@@ -10,7 +10,6 @@
 [Apple Documents](https://developer.apple.com/documentation/ "need")    
 [WWDC](https://developer.apple.com/videos/ "need")    
 [Xcode Guide](http://help.apple.com/xcode/ "need")    
-
 [HIG](https://developer.apple.com/ios/human-interface-guidelines/ "need")    
 [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/ "need")    
 [Swift Style Guide](https://github.com/raywenderlich/swift-style-guide "need")    
