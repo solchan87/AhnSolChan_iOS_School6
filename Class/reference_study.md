@@ -213,4 +213,5 @@
 [ReactiveX](http://reactivex.io "need")    
 [Rx Marbles](http://rxmarbles.com "need")    
 [RxSwift](https://github.com/ReactiveX/RxSwift "need")    
-[RxSwiftCommunity](https://github.com/RxSwiftCommunity "need")    
+[RxSwiftCommunity](https://github.com/RxSwiftCommunity "need")
+[Reactive paradigm](https://www.slideshare.net/ChiwonSong/20171104-frp-81598173 "need")
