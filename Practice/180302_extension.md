@@ -9,7 +9,7 @@
 ### Subscript 문법
 ```swift
 //
-subscript(index: Type) -> Type { 
+subscript(index: Tyㅅe) -> Type { 
     get { 
         // return an appropriate subscript value here
     } set(newValue) {
