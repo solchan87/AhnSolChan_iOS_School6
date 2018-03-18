@@ -54,7 +54,6 @@ github "GitCategory/GitName"
 ```
 carthage update
 ```
-
 `TARGETS` > `Build Phases` > `Link Binary With Libraries` 에서
 add(+) 를 눌러 `Add Others`에서 frameworkName.framework 를 open해준다.
 
