@@ -61,3 +61,26 @@ e.g. 0x12345678   =>   0x78    0x56    0x34    0x12
     - 네트워크 바이트 오더 표준 : Big Endian    
 * Byte 단위 전송    
     -  Endian 문제는 Byte 단위로 저장할 때 순서의 차이에 의해 발생하므로, 애초에 1 Byte 단위로 데이터를 보내면 바이트 순서에 구애받지 않고 통신 가능    
+
+
+```swift
+import Foundation
+
+class CardDataController {
+    
+    let cardList = [1,2,3,4,5,6,7,8,9,10,1,2,3,4,5,6,7,8,9,10]
+    
+    func shuffleCardList(){
+        var tempList = cardList
+        var resultList: [Int] = []
+        
+        while tempList.count != 0{
+            let index: Int = Int(arc4random_uniform(UInt32(tempList.count)))
+            resultList.append(tempList[index])
+            tempList.remove(at: index)
+        }
+        print(resultList)
+    }
+    
+}
+```
